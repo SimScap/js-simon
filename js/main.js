@@ -14,20 +14,30 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 let randomNumbers = [];
 let fixedValue=5;
 let chosenNumbers = [];
+let time = 0;
 
 
 //Funzione che mi crea 5 numeri random (devo aggiungere una condizione che verifichi che non siano doppi)
 document.getElementById('start').addEventListener('click', function(){   
     for ( let i = 0; i < 5; i++){
         randomNumbers =  Math.floor((Math.random() * 100) + 1);
-        document.getElementById('text').innerHTML= randomNumbers;
+        document.getElementById('text').innerHTML += randomNumbers;
         console.log(randomNumbers); 
-        
         setTimeout(function(){
             document.getElementById("text").innerHTML = '';
-        }, 30000);
-}
+        }, 3000);
+    }
+    
+    chosenNumbers = setInterval( function(){
+        for (let i = 0; i < 5; i++){
+            time++;
+            chosenNumbers = parseInt(prompt('flkjndskf'));
+        }
+        console.log(time)
+    },4000)
+   
 })
+
 
 
 
